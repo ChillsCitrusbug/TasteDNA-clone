@@ -5,8 +5,8 @@
 }
 
 body{
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
 }
 
 
@@ -30,25 +30,15 @@ body{
     }
 }
 
-
-
 .a-topbar{
     color: white;
     text-decoration: none;
 }
 
 a:hover{
-    transition-duration: 0.35s;
-    color: #ff8000
+    transition-duration: 0.2s;
+    color: #ff8a73;
 }
-
-
-.bullet:hover{
-    text-decoration: ;
-
-}
-
-
 
 
 /* navbar */
@@ -63,22 +53,41 @@ a:hover{
     width:100%;
 }
 
-
-
-
 .nav-link{
     color: #554a8c;
-    font-weight: bold; 
+}
+
+.nav-link-main{
+    margin: 0 23px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.nav-link-main:hover{
+    transition-duration: 0.2s;
+    color: #ff8a73;
+}
+
+.nav-link-another{
+    margin: 0 10px;
+    font-size: 20px;
+}
+
+.bullet:hover::before{
+    content: '• ';
+    
 }
 
 .navbar-wrapper {
     position:relative;
 }
+
 .carousel {
     top:0;
 }
-.carousel-inner {
-    width: 100%; 
+
+.carousel-inner-first {
+    width: 100vw; 
     overflow: hidden;
 }
 
@@ -97,16 +106,24 @@ a:hover{
 
 }
 
+.carousel-control-prev,
+  .carousel-control-next {
+    width: 6%; /* Adjust width to your preference */
+    bottom: 70px;
+  }
+
+
+
 .carousel-caption h5{
     font-size: 45px;
     color: #ff8000;
 }
 
-.carousel-indicators [data-bs-target] {
+/* .carousel-indicators .main-carousel [data-bs-target] {
     box-sizing: content-box;
     flex: 0 1 auto;
-    width: 10px; /* change width */
-    height: 10px; /* change height */
+    width: 10px;
+    height: 10px;
     padding: 0;
     margin-right: 15px;
     margin-left: 15px;
@@ -131,7 +148,7 @@ a:hover{
 
 .three{
     background-color: cornflowerblue;
-}
+} */
 
 
 
@@ -148,38 +165,59 @@ a:hover{
     z-index: 1;
   }
   
-  .carousel-caption {
+.carousel-caption {
     z-index: 2;
   }
 
 
 
 
-/* empty section */
+/* change-bg section */
 
-.empty{
+#myDiv{
     width: 100vw;
-    height: 100px;
-    background-color: #c0d6e7;
+    height: 300vh;
+    background-color: #e5efff;
 }
 
+.change-bg {
+    background-color: #e5efff;
+    transition: background-color 0.3s ease; /* Smooth transition */
+  }
 
-/* app-cottage phone section */
 
-.app-cottage{
-    width: 100vw;
-    height: 478px;
-    background-color: #c0d6e7;
+h2 {
+    font-size: 26px;
+    font-weight: 600;
+    color: #58468c;
 }
 
-/* whats cooking at tastedna? */
-
-.cards-carousel{
-    width: 100vw;
-    height: 1252px;
-    background-color: #c0d6e7;
+h1, h2, h3, h4, h5, h6 {
+    color: #58468c;
 }
 
+    /* cards - carousel */
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+.card img {
+    max-width: 170px;
+    max-height: 80px;
+  }
+
+.card {
+    margin: 0 0.5em;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+    border: none;
+    border-radius: 0;
+  }
+
+.carousel-inner {
+    padding: 1em;
+}
 
 
 /* updates-copyright section */
@@ -208,3 +246,8 @@ a:hover{
     text-align: center;
     padding: 20px 0;
 }
+
+
+
+
+
